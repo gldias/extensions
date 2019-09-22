@@ -7,6 +7,9 @@ This extension measures atmospheric pressure and returns the data to your phone 
 
 ## Properties
 ![Is Barometer Available Block](BarometerBlocksImages/barometerAvailable.jpg)
+<p align="center">
+  <img alt="Is Barometer Available Block" src="BarometerBlocksImages/barometerAvailable.jpg">
+</p>
 
 Indicates whether the sensor is available.
 
