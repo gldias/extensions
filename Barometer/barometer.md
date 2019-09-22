@@ -6,14 +6,11 @@ For help on how to use an App Inventor extension, please see this [extensions gu
 This extension measures atmospheric pressure and returns the data to your phone to be displayed however you would like. This requires a device with a pressure sensor.
 
 ## Properties
-![Is Barometer Available Block](BarometerBlocksImages/barometerAvailable.jpg)
-<p align="center">
-  <img alt="Is Barometer Available Block" src="BarometerBlocksImages/barometerAvailable.jpg">
-</p>
+![Is Barometer Available Block](https://gldias.github.io/extensions/Barometer/BarometerBlocksImages/barometerAvailable.JPG)
 
 Indicates whether the sensor is available.
 
-![Is Barometer Enabled Block](BarometerBlocksImages/barometerEnabled.jpg)
+![Is Barometer Enabled Block](BarometerBlocksImages/barometerEnabled.JPG)
 
 Indicates whether the sensor is enabled.
 
