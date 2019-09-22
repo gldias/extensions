@@ -2,6 +2,7 @@
 
 For help on how to use an App Inventor extension, please see this [extensions guide](http://ai2.appinventor.mit.edu/reference/other/extensions.html).
 
+## Download
 You can download the barometer extension [here](https://gldias.github.io/extensions/Barometer/barometer.aix).
 
 ## Description
