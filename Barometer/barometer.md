@@ -2,6 +2,8 @@
 
 For help on how to use an App Inventor extension, please see this [extensions guide](http://ai2.appinventor.mit.edu/reference/other/extensions.html).
 
+You can download the barometer extension [here](https://gldias.github.io/extensions/Barometer/barometer.aix).
+
 ## Description
 This extension measures atmospheric pressure and returns the data to your phone to be displayed however you would like. This requires a device with a pressure sensor.
 
