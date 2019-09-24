@@ -5,3 +5,4 @@ This repository will host open-source extension files along with the correspondi
 Currently, this repo has the following extensions:
 
 - [Barometer](https://gldias.github.io/extensions/Barometer/barometer)
+- [Sound Pressure Level](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel)
