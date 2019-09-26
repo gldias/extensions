@@ -6,12 +6,16 @@ For help on how to use an App Inventor extension, please see this [extensions gu
 You can download the barometer extension [here](https://gldias.github.io/extensions/Barometer/barometer.aix).
 
 ## Description
-This extension measures atmospheric pressure and returns the data to your phone to be displayed however you would like. This requires a device with a pressure sensor.
+A barometer is a device that is used to measure atmospheric pressure. Usually, barometers are used in weather forecasting, measuring pressure in "millibars," which is equivalent to 100 pascals (the standard unit of pressure). However, since atmospheric pressure changes depending on the distance from sea level, a barometer can also be used to measure altitude.
+
+This extension makes use of your device's pressure sensor to give you the ability to use barometric data within you App Inventor application. This data is returned in millibars and can be displayed, or used, however you would like.
+
+This requires a device with a pressure sensor.
 
 ## Properties
 ![Is Barometer Available Block](BarometerBlocksImages/barometerAvailable.JPG)
 
-Indicates whether the sensor is available.
+Indicates whether the sensor is available. Some devices may not have a pressure sensor, and therefore cannot use this barometer extension.
 
 ![Is Barometer Enabled Block](BarometerBlocksImages/barometerEnabled.JPG)
 
@@ -19,7 +23,7 @@ Indicates whether the sensor is enabled.
 
 ![Set Barometer Enabled Block](BarometerBlocksImages/setBarometerEnabled.JPG)
 
-Sets the barometer sensor `Enabled` flag to provided boolean value (true or false).
+Sets the sensor's `Enabled` flag to the provided boolean value (true or false). This can be used to turn the barometer on and off within the app.
 
 ![Get Barometer Millibar Block](BarometerBlocksImages/barometerMbar.JPG)
 
