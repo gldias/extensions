@@ -33,4 +33,4 @@ Gets the sound pressure level data in decibels.
 This event is triggered when the sound level changes. For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
 ## Example App
 
-You can use this [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevelDemo.aia) to see the sound pressure level extension in action.
+You can use this [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
