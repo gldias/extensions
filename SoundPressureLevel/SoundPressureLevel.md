@@ -8,7 +8,7 @@ You can download the sound pressure level extension [here](https://gldias.github
 ## Description
 This extension measures the sound pressure level and returns the data to your phone to be displayed however you would like. This data is shown in decibels, which is the standard unit used to measure the intensity of a sound. With this data you can build applications that measure and display sound around the device, or even to use sound as a way to control some other component of the application!
 
-Currently, permission to use the microphone needs to be given before using the app. To do this, navigate through the device's settings to the 'MIT AI2 Companion' app or custom built Sound Pressure Level app, find where permissions are listed and toggle the microphone permission to the 'on' position.
+This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermissionPermissionName` block from the screen component, and request the "RECORD_AUIO" permission.
 
 ## Properties
 ![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.JPG)
