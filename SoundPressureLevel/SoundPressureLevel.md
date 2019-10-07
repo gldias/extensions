@@ -27,6 +27,14 @@ Sets the sensor's `Enabled` flag to the provided boolean value (true or false). 
 
 Gets the sound pressure level data in decibels.
 
+![Set Sound Pressure Listening Interval Block](SPLBlocksImages/SPLSetInterval.PNG)
+
+Sets the listening interval in milliseconds for how fast should the SPL return a reading.
+
+![Get Sound Pressure Listening Interval Block](SPLBlocksImages/SPLGetInterval.PNG)
+
+Gets the listening interval in milliseconds.
+
 ## Events
 ![Sound Pressure Level Changed Block](SPLBlocksImages/splChanged.JPG)
 
