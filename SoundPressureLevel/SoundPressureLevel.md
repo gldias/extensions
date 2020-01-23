@@ -6,7 +6,15 @@ For help on how to use an App Inventor extension, please see this [extensions gu
 You can download the sound pressure level extension [here](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel.aix).
 
 ## Description
-This extension measures the sound pressure level and returns the data to your phone to be displayed however you would like. This data is shown in decibels, which is the standard unit used to measure the intensity of a sound. With this data you can build applications that measure and display sound around the device, or even to use sound as a way to control some other component of the application!
+This extension measures the sound pressure level and returns the data to your phone to be displayed however you would like. This data is shown in decibels, which is the standard unit used to measure the intensity of a sound. 
+There are currently three different measurements reported, which include unweighted decibels (dB), [A-Weighted decibels (dBA)](https://en.wikipedia.org/wiki/A-weighting), and [C-Weighted decibels (dBC)](https://en.wikipedia.org/wiki/A-weighting#C). 
+With this data you can build applications that measure and display sound around the device, or even to use sound as a way to control some other component of the application!
+
+Notes:
+
+There are some accuracy issues across devices. 
+Different devices will have different micorphones with different sensitivy levels. 
+This means different devices will hear sounds a little differently, causing measurements to differ.
 
 This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermissionPermissionName` block from the screen component, and request the "RECORD_AUIO" permission.
 
@@ -25,7 +33,7 @@ Sets the sensor's `Enabled` flag to the provided boolean value (true or false). 
 
 ![Get Sound Pressure Level Block](SPLBlocksImages/splData.JPG)
 
-Gets the sound pressure level data in decibels.
+Gets the sound pressure level data in decibels (dB). The measurement reported by this call is unweighted.
 
 ![Set Sound Pressure Listening Interval Block](SPLBlocksImages/SPLSetInterval.PNG)
 
@@ -39,6 +47,17 @@ Gets the listening interval in milliseconds.
 ![Sound Pressure Level Changed Block](SPLBlocksImages/splChanged.JPG)
 
 This event is triggered when the sound level changes. For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
+
+A-Weighted Sound Pressure Level Changed Block
+
+This event is triggered when the sound level changes, and reports a A-weighted Sound Pressure Level in decibels (dBA).
+For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
+
+C-Weighted Sound Pressure Level Changed Block
+
+This event is triggered when the sound level changes, and reports a C-weighted Sound Pressure Level in decibels (dBC).
+For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
+
 ## Example App
 
 You can use this [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
