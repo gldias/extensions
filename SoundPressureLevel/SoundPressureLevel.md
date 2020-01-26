@@ -13,10 +13,10 @@ With this data you can build applications that measure and display sound around 
 Notes:
 
 There are some accuracy issues across devices. 
-Different devices will have different micorphones with different sensitivy levels. 
+Different devices will have different microphones with different sensitivity levels. 
 This means different devices will hear sounds a little differently, causing measurements to differ.
 
-This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermissionPermissionName` block from the screen component, and request the "RECORD_AUIO" permission.
+This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermissionPermissionName` block from the screen component, and request the "RECORD_AUDIO" permission.
 
 ## Properties
 ![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.JPG)
@@ -48,12 +48,12 @@ Gets the listening interval in milliseconds.
 
 This event is triggered when the sound level changes. For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
 
-A-Weighted Sound Pressure Level Changed Block
+![ A Weighted Sound Pressure Level Changed Block](SPLBlocksImages/splChangedAWeight.PNG)
 
 This event is triggered when the sound level changes, and reports a A-weighted Sound Pressure Level in decibels (dBA).
 For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
 
-C-Weighted Sound Pressure Level Changed Block
+![ C Weighted Sound Pressure Level Changed Block](SPLBlocksImages/splChangedCWeight.PNG)
 
 This event is triggered when the sound level changes, and reports a C-weighted Sound Pressure Level in decibels (dBC).
 For continuous reading, this block would be used to encompass any additional logic that requires continuous sound measurements.
