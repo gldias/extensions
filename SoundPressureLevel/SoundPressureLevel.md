@@ -44,7 +44,7 @@ Sets the listening interval in milliseconds for how fast should the SPL return a
 Gets the listening interval in milliseconds.
 
 ## Events
-![Sound Pressure Level Changed Block](SPLBlocksImages/splChanged.JPG)
+![Sound Pressure Level Updated Block](SPLBlocksImages/splUpdated.PNG)
 
 This event is triggered when the sound pressure level is updated. 
 This event gives access to the sound intensity over the last `ListenIntervalMilliseconds` in decibels (dB), A-Weighted decibels (dBA), C-Weighted decibels (dBC).
