@@ -51,7 +51,7 @@ This event gives access to the sound intensity over the last `ListenIntervalMill
 
 ## Example App
 
-You can use this [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
+You can use a [minimal App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL_minimal.aia) or a more in-depth [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
 
 ## Developer Documentation
 
