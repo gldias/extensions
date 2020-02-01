@@ -2,11 +2,11 @@
 
 ## Overview
 This is an extension to help add Sound Pressure Level Meter functionality to an application, allowing the user to measure the intensity of background sound in decibels.
-This extension will report unweighted, A-Weighted, and C-Weighted decibels over a user selected time interval which defaults to 200 milliseconds.
-A-Weighted and C-Weighted decibels are calculated by performing a Fast Fourier Transformation (FFT) on the sound data over time, weighing the resulting frequency bins [according to these formulas](https://en.wikipedia.org/wiki/A-weighting#Function_realisation_of_some_common_weightings), and performing an inverse FFT to calculate the decibels of.
+This extension will report unweighted, A-Weighted, and C-Weighted decibels over a user selected time interval which is 200 milliseconds (ms) by default.
+A-Weighted and C-Weighted decibels are calculated by performing a Fast Fourier Transformation (FFT) on the sound data over time, weighing the resulting frequency bins [according to these formulas](https://en.wikipedia.org/wiki/A-weighting#Function_realisation_of_some_common_weightings), and performing an inverse FFT and then convert sound data to pascals then decibels..
 
 ### Issues
-There are some areas improvement. 
+There are some known areas improvement. 
 
 * Applications work well while they are in the foreground and in active use, however there are some issues when multitasking with the `SPL.aia` built as an APK. 
 The Android operating system seems to believe that when the application is put into the background that it frequently closes.
@@ -23,26 +23,26 @@ However, higher Android API levels do [provide a value for microphone sensitivit
 `SoundPressureLevel(ComponentContainer container)`, `onDelete()`, `onResume()`, and `onStop()` are functions to help control the lifecycle of the android application. 
 
 `SoundPressureLevel(ComponentContainer container)` is what starts the application, and a second thread that drives the application. 
-In this thread, the extension checks to see if the android permission allows for recording sound, if the user wants to be listening, and analyzes the sound to measure the intensity if allowed.
-The time delay between sound measurements is currently 200ms by default, however that number can be temporarily changed by the user before or  while running an app.
+In this thread, the extension checks to see if the android permission allows for recording sound, if the user wants to be analyzing sound data, and analyzes the sound to measure the intensity if allowed.
+The time delay between sound measurements is currently 200ms by default, however that number can be temporarily changed by the user before creating the app through MIT App Inventor or while running the app by giving the `ListenIntervalMilliseconds(int milliSeconds)` block a new value.
 
 `onDelete()`, `onResume()`, and `onStop()` help to control the app as the user interacts with the phone and other applications. 
 `OnStop()` is activated when the user navigates away from the application, `onResume()` is called when the user returns to the application that's been in the background, and `onDelete()` is called when the application is closed and removed from memory.
 
-This area could use some work. Currently, when the application is put into the background a warning can pop-up saying that "SPLApp keeps stopping" and newer versions of Android report that the application frequently crashes. However, the user can put the app in the background by navigating to another app then navigate back to the application without a problem.
+This area could use some work. Currently, when the application is put into the background a warning can pop-up saying that "SPLApp keeps stopping" and newer versions of Android report that the application frequently crashes. However, the user can put the app in the background by navigating to another app then navigate back to the application without a noticeable problem.
 
 ## SPL Functions
 ### `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)`
 `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)` is where the majority of the calculations happen or are triggered. 
 To start, there is some commented out code to generate a 1000Hz signal. 
-That consistent signal can help with debugging by removing the changing background noise the phone picks up. 
+That consistent signal can help with debugging by removing the changing background noise the phone picks up.  
 After data structure creation, the first largest possible power of 2 (2^1, 2^2, 2^3, etc) amount of sound data will be taken to be used to find the intensity of. 
-This is required because we perform an FFT on the sound data, and FFT requires a power of 2 amount of data.
+This is required because we perform an FFT on the sound data, and FFT requires a power of 2 amount of data.  
 Performing an FFT takes the sound data over time, and returns sound data over frequency.
 That is represented by an array of shorts, where the short is the intensity and each index is a bin for a set of frequencies.
-Then each value to in the frequency bins are multiplied by weighting coefficients, to weigh the sound according to A and C weighting equations.
+Then each value to in the frequency bins are multiplied by weighting coefficients, to weigh the sound according to A and C weighting equations.  
 From here, both A and C weighed data is separate but they go through the same process.
-After the weighing, each version of the weighed sound has an Inverse FFT performed on it to transform the sound over frequency to a sound over time again.
+After the weighing, each version of the weighed sound has an Inverse FFT performed on it to transform the sound over frequency to sound over time again.
 After we have sound over time, the shorts that represent voltage are converted to doubles that represent sound pressure in pascals.
 A Root-Mean-Square is then performed on the sound data in pascals, to find an average of the sound data in line with what the human ear perceives.
 That mean in pascals is then converted to decibels and an event is trigger to send the value is sent to the UI to be shown to the user.
@@ -73,7 +73,7 @@ That number is then floored to round down, then the floored number is used as a 
 ### `analyzeSoundData()`
 This function uses Android API to read sound data from the phone's microphone, which is an array of shorts, and the length of the sound data recorded.
 The shorts gathered are then converted to Complex numbers so we can later perform an FFT on it.
-The array of Complex numbers and length returned are then packaged up into a Pair to be able to return them both and later use both values.
+The array of Complex numbers and length returned are then packaged up into a `Pair` to be able to return them both and later use both values.
 
 ### `startListening()`
 After checking to see if the user has granted permission to record and that the recorder object (a reference to the microphone) exists, the state is checked.
@@ -89,17 +89,21 @@ A private variable is then set to reflect this known state.
 
 ### `Available()`
 This is a method that can be accessed through MIT App Inventor.
+
 It creates a new reference to the microphone and tried to record with it.
 If the new reference is able to record then the app has permission to use the microphone and a microphone exists to listen with.
 If the new reference is not able to record, then the app is not able to use the microphone. 
 This could be could be due to the permission to record audio not being granted or there being no microphone available to use on the phone.
 
-### `SoundPressureLevelChanged(double decibels, double aWeightedDecibels, double cWeightedDecibels)`
+### `SoundPressureLevelUpdated(double decibels, double aWeightedDecibels, double cWeightedDecibels)`
 This is an event available to use in MIT App Inventor. 
+
 This fires every time there is an update from the `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)`, giving the user access to the newly calculated decibel reading.
 This reading is in unweighted decibels.
 
 ### `ListenIntervalMilliseconds(int milliSeconds)`
+This is a method that can be accessed through MIT App Inventor.
+
 This function sets the variable that controls the amount of time in milliseconds the thread in `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)` waits while listening for sound.
 The longer this time is, the more sound data will be recorded and analyzed for its intensity.
 However that also means the measurement will also be updated less often.

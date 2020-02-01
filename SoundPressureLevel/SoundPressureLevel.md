@@ -16,7 +16,7 @@ There are some accuracy issues across devices.
 Different devices will have different microphones with different sensitivity levels. 
 This means different devices will hear sounds a little differently, causing measurements to differ.
 
-This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUIO" permission by passing that text to the `permissionName` parameter.
+This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUDIO" permission by passing that text to the `permissionName` parameter.
 
 ## Properties
 ![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.JPG)
@@ -47,11 +47,11 @@ Gets the listening interval in milliseconds.
 ![Sound Pressure Level Updated Block](SPLBlocksImages/splUpdated.PNG)
 
 This event is triggered when the sound pressure level is updated. 
-This event gives access to the sound intensity over the last `ListenIntervalMilliseconds` in decibels (dB), A-Weighted decibels (dBA), C-Weighted decibels (dBC).
+This event gives access to the sound intensity over the last `ListenIntervalMilliseconds` amount of time in decibels (dB), A-Weighted decibels (dBA), C-Weighted decibels (dBC).
 
 ## Example App
 
-You can use a [minimal App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL_minimal.aia) or a more in-depth [example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
+You can use a [minimal App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL_minimal.aia) or a more [in-depth example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
 
 ## Developer Documentation
 
