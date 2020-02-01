@@ -3,7 +3,7 @@
 ## Overview
 This is an extension to help add Sound Pressure Level Meter functionality to an application, allowing the user to measure the intensity of background sound in decibels.
 This extension will report unweighted, A-Weighted, and C-Weighted decibels over a user selected time interval which is 200 milliseconds (ms) by default.
-A-Weighted and C-Weighted decibels are calculated by performing a Fast Fourier Transformation (FFT) on the sound data over time, weighing the resulting frequency bins [according to these formulas](https://en.wikipedia.org/wiki/A-weighting#Function_realisation_of_some_common_weightings), and performing an inverse FFT and then convert sound data to pascals then decibels..
+A-Weighted and C-Weighted decibels are calculated by performing a Fast Fourier Transformation (FFT) on the sound data over time, weighing the resulting frequency bins [according to these formulas](https://en.wikipedia.org/wiki/A-weighting#Function_realisation_of_some_common_weightings), and performing an inverse FFT and then convert sound data to pascals then decibels.
 
 ### Issues
 There are some known areas improvement. 
@@ -16,6 +16,17 @@ More information provided below.
 * There are accuracy issues when using two different devices next to each other. 
 This is likely due to different microphones having different sensitivities. 
 However, higher Android API levels do [provide a value for microphone sensitivity](https://developer.android.com/reference/android/media/MicrophoneInfo.html#getSensitivity()) which may be useful.
+
+## SPL Extension Source Code
+The source code for the Sound Pressure Level extension can be downloaded [here](https://gldias.github.io/extensions/SoundPressureLevel/SourceCode/SoundPressureLevel.java). 
+SoundPressureLevel.java also relies upon [Complex.java](https://gldias.github.io/extensions/SoundPressureLevel/SourceCode/Complex.java) and [FFT.java](https://gldias.github.io/extensions/SoundPressureLevel/SourceCode/FFT.java).
+Complex.java and FFT.java are courtesy of Robert Sedgewick and Kevin Wayne of Princeton's Computer Science Department. 
+Links to the location of the original files can be found in the respective Java files.
+
+To use the files, download a fork of the [MIT App Inventor Project](https://github.com/mit-cml/appinventor-sources) and navigate to "*download_location*/appinventor/components/src/com". 
+From there, you can either create your own package structure and change the `package` line at the top of each Java file or use the "com/rit/appinventor/components/runtime" already used in the files that were downloaded and place them in the runtime folder.
+
+If you haven't already, don't forget to check out how to [use and create extensions](http://ai2.appinventor.mit.edu/reference/other/extensions.html) and [how to build a local version of MIT App Inventor](https://www.google.com/url?q=https://docs.google.com/document/d/1Xc9yt02x3BRoq5m1PJHBr81OOv69rEBy8LVG_84j9jc/pub&sa=D&ust=1580595462075000).
 
 ## Android Related Functions
 
