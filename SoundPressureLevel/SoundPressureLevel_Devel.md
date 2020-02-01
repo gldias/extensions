@@ -32,8 +32,8 @@ The time delay between sound measurements is currently 200ms by default, however
 This area could use some work. Currently, when the application is put into the background a warning can pop-up saying that "SPLApp keeps stopping" and newer versions of Android report that the application frequently crashes. However, the user can put the app in the background by navigating to another app then navigate back to the application without a noticeable problem.
 
 ## SPL Functions
-### `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)`
-`onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)` is where the majority of the calculations happen or are triggered. 
+### `updateSoundPressureLevel(Pair<Complex[], Integer> tuple)`
+`updateSoundPressureLevel(Pair<Complex[], Integer> tuple)` is where the majority of the calculations happen or are triggered. 
 To start, there is some commented out code to generate a 1000Hz signal. 
 That consistent signal can help with debugging by removing the changing background noise the phone picks up.  
 After data structure creation, the first largest possible power of 2 (2^1, 2^2, 2^3, etc) amount of sound data will be taken to be used to find the intensity of. 
@@ -98,13 +98,13 @@ This could be could be due to the permission to record audio not being granted o
 ### `SoundPressureLevelUpdated(double decibels, double aWeightedDecibels, double cWeightedDecibels)`
 This is an event available to use in MIT App Inventor. 
 
-This fires every time there is an update from the `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)`, giving the user access to the newly calculated decibel reading.
+This fires every time there is an update from the `updateSoundPressureLevel(Pair<Complex[], Integer> tuple)`, giving the user access to the newly calculated decibel reading.
 This reading is in unweighted decibels.
 
 ### `ListenIntervalMilliseconds(int milliSeconds)`
 This is a method that can be accessed through MIT App Inventor.
 
-This function sets the variable that controls the amount of time in milliseconds the thread in `onSoundPressureLevelChanged(Pair<Complex[], Integer> tuple)` waits while listening for sound.
+This function sets the variable that controls the amount of time in milliseconds the thread in `updateSoundPressureLevel(Pair<Complex[], Integer> tuple)` waits while listening for sound.
 The longer this time is, the more sound data will be recorded and analyzed for its intensity.
 However that also means the measurement will also be updated less often.
 If this number is smaller, the time listening for sound is short so there will be less sound data per loop.
