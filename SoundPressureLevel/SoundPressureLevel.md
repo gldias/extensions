@@ -6,17 +6,18 @@ For help on how to use an App Inventor extension, please see this [extensions gu
 You can download the sound pressure level extension [here](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel.aix).
 
 ## Description
-This extension measures the sound pressure level and returns the data to your phone to be displayed however you would like. This data is shown in decibels, which is the standard unit used to measure the intensity of a sound. 
-There are currently three different measurements reported, which include unweighted decibels (dB), [A-Weighted decibels (dBA)](https://en.wikipedia.org/wiki/A-weighting), and [C-Weighted decibels (dBC)](https://en.wikipedia.org/wiki/A-weighting#C). 
-With this data you can build applications that measure and display sound around the device, or even to use sound as a way to control some other component of the application!
+This extension measures the sound pressure level and returns the data in decibels.
+There are three different measurements reported, unweighted decibels (dB), [A-Weighted decibels (dBA)](https://en.wikipedia.org/wiki/A-weighting), and [C-Weighted decibels (dBC)](https://en.wikipedia.org/wiki/A-weighting#C). 
+With this data you can build applications that measure and display sound around the device, or even to use the sound level as a way to control some other component of the application!
 
 Notes:
 
 There are some accuracy issues across devices. 
-Different devices will have different microphones with different sensitivity levels. 
-This means different devices will hear sounds a little differently, causing measurements to differ.
+Different devices will have different microphones with different sensitivity levels, causing measurements to vary from device to device.
 
-This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. This permission can be granted while running or before starting the application that includes the extension. To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUDIO" permission by passing that text to the `permissionName` parameter.
+This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. 
+This permission can be granted while running or before starting the application. 
+To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUDIO" permission by passing that text to the `permissionName` parameter.
 
 ## Properties
 ![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.JPG)

@@ -6,7 +6,7 @@ This extension will report unweighted, A-Weighted, and C-Weighted decibels over 
 A-Weighted and C-Weighted decibels are calculated by performing a Fast Fourier Transformation (FFT) on the sound data over time, weighing the resulting frequency bins [according to these formulas](https://en.wikipedia.org/wiki/A-weighting#Function_realisation_of_some_common_weightings), and performing an inverse FFT and then convert sound data to pascals then decibels.
 
 ### Issues
-There are some known areas improvement. 
+There are some known areas that could use improvement. 
 
 * Applications work well while they are in the foreground and in active use, however there are some issues when multitasking with the `SPL.aia` built as an APK. 
 The Android operating system seems to believe that when the application is put into the background that it frequently closes.
@@ -15,7 +15,7 @@ More information provided below.
 
 * There are accuracy issues when using two different devices next to each other. 
 This is likely due to different microphones having different sensitivities. 
-However, higher Android API levels do [provide a value for microphone sensitivity](https://developer.android.com/reference/android/media/MicrophoneInfo.html#getSensitivity()) which may be useful.
+However, higher Android API levels do [provide a value for microphone sensitivity](https://developer.android.com/reference/android/media/MicrophoneInfo.html#getSensitivity()) which is not yet used may be useful.
 
 ## SPL Extension Source Code
 The source code for the Sound Pressure Level extension can be downloaded [here](https://gldias.github.io/extensions/SoundPressureLevel/SourceCode/SoundPressureLevel.java). 
