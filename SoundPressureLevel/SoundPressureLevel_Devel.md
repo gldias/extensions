@@ -15,7 +15,7 @@ More information provided below.
 
 * There are accuracy issues when using two different devices next to each other. 
 This is likely due to different microphones having different sensitivities. 
-However, higher Android API levels do [provide a value for microphone sensitivity](https://developer.android.com/reference/android/media/MicrophoneInfo.html#getSensitivity()) which is not yet used may be useful.
+However, higher Android API levels do [provide a value for microphone sensitivity](https://developer.android.com/reference/android/media/MicrophoneInfo.html#getSensitivity()) which is not yet used and may be useful.
 
 ## SPL Extension Source Code
 The source code for the Sound Pressure Level extension can be downloaded [here](https://gldias.github.io/extensions/SoundPressureLevel/SourceCode/SoundPressureLevel.java). 
