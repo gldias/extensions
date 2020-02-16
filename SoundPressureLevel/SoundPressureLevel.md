@@ -57,3 +57,6 @@ You can use a [minimal App Inventor application](https://gldias.github.io/extens
 ## Developer Documentation
 
 More in-depth for developers can be found [here](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel_Devel).
+
+## Authors
+This extension was originally created by Nathan Oesterle (lead developer), Guilherme Lopes Dias, George Colgrove, and Ryan Connors
