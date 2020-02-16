@@ -20,19 +20,19 @@ This permission can be granted while running or before starting the application.
 To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUDIO" permission by passing that text to the `permissionName` parameter.
 
 ## Properties
-![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.PNG)
+![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.png)
 
 Indicates whether or not there is a microphone available to measure sound pressure.
 
-![Is Sound Pressure Enabled Block](SPLBlocksImages/splEnabled.PNG)
+![Is Sound Pressure Enabled Block](SPLBlocksImages/splEnabled.png)
 
 Indicates whether or not the microphone is measuring sound pressure.
 
-![Set Sound Pressure Enabled Block](SPLBlocksImages/setSPLEnabled.PNG)
+![Set Sound Pressure Enabled Block](SPLBlocksImages/setSPLEnabled.png)
 
 Sets the sensor's `Enabled` flag to `true` to turn the extension on and `false` to turn the extension off.
 
-![Get Sound Pressure Level Block](SPLBlocksImages/splData.PNG)
+![Get Sound Pressure Level Block](SPLBlocksImages/splData.png)
 
 Gets the sound pressure level data in decibels (dB). The measurement reported by this call is unweighted.
 
