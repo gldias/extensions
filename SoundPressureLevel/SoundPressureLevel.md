@@ -36,16 +36,16 @@ Sets the sensor's `Enabled` flag to `true` to turn the extension on and `false` 
 
 Gets the sound pressure level data in decibels (dB). The measurement reported by this call is unweighted.
 
-![Set Sound Pressure Listening Interval Block](SPLBlocksImages/SPLSetInterval.PNG)
+![Set Sound Pressure Listening Interval Block](SPLBlocksImages/SPLSetInterval.png)
 
 Sets the listening interval in milliseconds for how fast should the SPL return a reading.
 
-![Get Sound Pressure Listening Interval Block](SPLBlocksImages/SPLGetInterval.PNG)
+![Get Sound Pressure Listening Interval Block](SPLBlocksImages/SPLGetInterval.png)
 
 Gets the listening interval in milliseconds.
 
 ## Events
-![Sound Pressure Level Updated Block](SPLBlocksImages/splUpdated.PNG)
+![Sound Pressure Level Updated Block](SPLBlocksImages/splUpdated.png)
 
 This event is triggered when the sound pressure level is updated. 
 This event gives access to the sound intensity over the last `ListenIntervalMilliseconds` amount of time in decibels (dB), A-Weighted decibels (dBA), C-Weighted decibels (dBC).
