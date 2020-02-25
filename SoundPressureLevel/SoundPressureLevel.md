@@ -17,7 +17,6 @@ Different devices will have different microphones with different sensitivity lev
 
 This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. 
 This permission can be granted while running or before starting the application. 
-To ask for permission while running, include an `AskForPermission` block from the screen component, and request the "RECORD_AUDIO" permission by passing that text to the `permissionName` parameter.
 
 ## Properties
 ![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.png)

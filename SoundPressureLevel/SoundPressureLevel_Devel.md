@@ -31,14 +31,14 @@ If you haven't already, don't forget to check out how to [use and create extensi
 ## Android Related Functions
 
 ### [Android Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle)
-`SoundPressureLevel(ComponentContainer container)`, `onDelete()`, `onResume()`, and `onStop()` are functions to help control the lifecycle of the android application. 
+`SoundPressureLevel(ComponentContainer container)`, `onDelete()`, `onResume()`, `onInitialize()`, and `onStop()` are functions to help control the lifecycle of the android application. 
 
 `SoundPressureLevel(ComponentContainer container)` is what starts the application, and a second thread that drives the application. 
 In this thread, the extension checks to see if the android permission allows for recording sound, if the user wants to be analyzing sound data, and analyzes the sound to measure the intensity if allowed.
 The time delay between sound measurements is currently 200ms by default, however that number can be temporarily changed by the user before creating the app through MIT App Inventor or while running the app by giving the `ListenIntervalMilliseconds(int milliSeconds)` block a new value.
 
-`onDelete()`, `onResume()`, and `onStop()` help to control the app as the user interacts with the phone and other applications. 
-`OnStop()` is activated when the user navigates away from the application, `onResume()` is called when the user returns to the application that's been in the background, and `onDelete()` is called when the application is closed and removed from memory.
+`onDelete()`, `onResume()`, `onInitialize()`, and `onStop()` help to control the app as the user interacts with the phone and other applications. 
+`OnStop()` is activated when the user navigates away from the application, `onResume()` is called when the user returns to the application that's been in the background, and `onDelete()` is called when the application is closed and removed from memory. `onInitialize()` is used when the application is first started by the user.
 
 This area could use some work. Currently, when the application is put into the background a warning can pop-up saying that "SPLApp keeps stopping" and newer versions of Android report that the application frequently crashes. However, the user can put the app in the background by navigating to another app then navigate back to the application without a noticeable problem.
 
@@ -126,3 +126,11 @@ This function checks the Android package manager for the permission to record au
 Once it sees whether or not it has permission, it then checks the applications internal knowledge of its ability to record to see if it's recently changed.
 If the information from the operating system and internal values differ, then the internal values will be updated.
 A boolean representing whether or not permission is granted is then returned.
+
+### `requestPermission(final String caller) `
+This function uses Android's form and permission handler to request the RECORD_AUDIO permission for the application. 
+The `caller` parameter is the name of the function where permissions were requested, to trace back where this was happening for error messages.
+
+If the permission is granted, the application will be able to measure the sound level of the surrounding area. 
+If the permission is denied, the application with gracefully not do the measurements and calculations. 
+The user would then need to go into the settings to grant the permission or restart the application for the prompt to come up again.
