@@ -4,10 +4,15 @@
 This is an extension to help add ROS functionality to an Android application, allowing the user to interact with a ROS node.
 
 ### Issues
-There are some known areas that could use improvement. 
+
+The current issues that block the ROS libraries from being added to AppInventor is that the compiler only use dx in dex mode which only allow that total amount of function in the libraries to add up to under 64k methods however the ROS library plus it’s dependencies push it over that limit, which either require multi-dex or d8 which both appear to work with AppInventor. The PR to add d8 to AppInventor is located here. A full document outlining the issue is located here.
+	
+The next issue is there is conflict in libraries so we had to use guava 14 since AppInventor already used it instead of using what we currently know guave 12 that works already which could cause issues once the last library that currently is our main blocker has been resolved.
+
+The main trouble library is the apache_xmlrpc_client-0.3.6 library which contains a resource file that when dx or d8 process it strips out of the library so when the code is executed it can’t find it and breaks. Once the build process is updated to repackage these resource files it would work as expected. 
 
 ## ROS Extension Source Code
-The source code for the Robot Operating System extension can be downloaded *here*. 
+The current source code for the Robot Operating System extension can be found [here](https://github.com/gldias/appinventor-sources/tree/feature/ros). 
 
 To use the files, download a fork of the [MIT App Inventor Project](https://github.com/mit-cml/appinventor-sources) and navigate to "*download_location*/appinventor/components/src/com". 
 From there, you can either create your own package structure and change the `package` line at the top of each Java file or use the "com/rit/appinventor/components/runtime" already used in the files that were downloaded and place them in the runtime folder.
@@ -22,4 +27,10 @@ If you haven't already, don't forget to check out how to [use and create extensi
 `onDelete()`, `onResume()`, `onInitialize()`, and `onStop()` help to control the app as the user interacts with the phone and other applications. 
 `OnStop()` is activated when the user navigates away from the application, `onResume()` is called when the user returns to the application that's been in the background, and `onDelete()` is called when the application is closed and removed from memory. `onInitialize()` is used when the application is first started by the user.
 
-## ROS Functions
+## ROS Specific Functions
+
+[ROSJava Documentation](http://wiki.ros.org/rosjava) 
+
+### Publisher Nodes
+
+Publishers in ROS are used to send commands to the robots in order to be executed. The `ROSJava` library saves you a lot of time in writing these by providing the skeleton for the nodes in the form of the `AbstractNodeMain` class. This class implements the `NodeMain` interface that provides you with all the node methods for you to fill in. The main method you should focus on is the `onStart()` method provided by the interface. This method is where you should include the loop that tells the robot what to do. Make sure when writing these to provide the correct message type and that you have said message type in your project or else the publisher node won’t work. A good example of what a publisher node looks like can be found [here](http://rosjava.github.io/rosjava_core/0.1.6/getting_started.html).
