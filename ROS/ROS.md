@@ -1,18 +1,14 @@
-# **Robot Operating System Extension**
+# **Robot Operating System Extension Concept**
 
 For help on how to use an App Inventor extension, please see this [extensions guide](http://ai2.appinventor.mit.edu/reference/other/extensions.html).
 
-## Download
-You can download the Robot Operating System extension *here*.
+## Notes
+This documentatin is for an exntension that is currently a work in progress and not available for download at this time.
 
 ## Description
-This extension allows users to interact with a Robot Operating System (ROS) node. To start, this extension will allow the user to move a robot using the `twist` message.
+This extension will allow users to interact with a Robot Operating System (ROS) node. To start, this extension will allow the user to move a robot using the `twist` message.
 
-## Properties
-
-## Events
-
-## Functions
+## Functions Concept
 ![Connect to master URI](ROSBlocks/ConnectToMasterURI.png)
 
 Connects the application to the ROS master node at the `URI` address.
@@ -44,10 +40,6 @@ Sends a `twist` to tell the robot to spin clockwise indefinitely. The arguments 
 ![Spin Counter-Clockwise](ROSBlocks/SpinCounterClockwise.png)
 
 Sends a `twist` to tell the robot to spin counter-clockwise indefinitely. The arguments tell the robot how fast to spin.
-
-## Example App
-
-You can use a *minimal App Inventor application* or a more *in-depth example App Inventor application* to see the ROS extension in action.
 
 ## Developer Documentation
 
