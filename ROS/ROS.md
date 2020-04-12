@@ -45,5 +45,9 @@ Sends a `twist` to tell the robot to spin counter-clockwise indefinitely. The ar
 
 More in-depth for developers can be found [here](https://gldias.github.io/extensions/ROS/ROS_Devel).
 
+## Download
+
+A non-functioning extension file can be found [here](https://github.com/gldias/extensions/raw/gh-pages/ROS/ros_bridge.aix)
+
 ## Authors
 This extension was originally created by George Colgrove (lead developer), Guilherme Lopes Dias, Ryan Connors, and Nathan Oesterle

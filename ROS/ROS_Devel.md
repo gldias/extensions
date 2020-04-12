@@ -20,7 +20,7 @@ The main trouble library is the apache_xmlrpc_client-0.3.6 library which contain
 A file for the extension that has the skeleton code for the extension has been created. That file contains the defined blocks for the extension, documentation for those blocks can be found [here](https://gldias.github.io/extensions/ROS/ROS). It's reccomended that if you want to contribute to the development of this extension to read through the documentation for ROS as well as ROSjava, both of which can be found below. It is also reccomended that you setup a ROS simulator of some kind. The one that we reccomend using is Gazebo alongside GzWeb and links to those can also be found below.
 
 ## ROS Extension Source Code
-The current source code for the Robot Operating System extension can be found [here](https://github.com/gldias/appinventor-sources/tree/feature/ros). 
+The current source code for the Robot Operating System extension can be found [here](https://gldias.github.io/extensions/ROS/ros_bridge.java). 
 
 To use the files, download a fork of the [MIT App Inventor Project](https://github.com/mit-cml/appinventor-sources) and navigate to "*download_location*/appinventor/components/src/com". 
 From there, you can either create your own package structure and change the `package` line at the top of each Java file or use the "com/rit/appinventor/components/runtime" already used in the files that were downloaded and place them in the runtime folder.
