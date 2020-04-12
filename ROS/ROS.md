@@ -43,7 +43,7 @@ Sends a `twist` to tell the robot to spin counter-clockwise indefinitely. The ar
 
 ## Developer Documentation
 
-More in-depth for developers can be found [here](https://gldias.github.io/extensions/ROS/ROS_Devel).
+More in-depth information for developers can be found [here](https://gldias.github.io/extensions/ROS/ROS_Devel).
 
 ## Download
 
