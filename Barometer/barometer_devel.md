@@ -12,7 +12,7 @@ Other units could be added.
 Currently the pressure is reported only in MilliBars, other units that could be added are Atmospheres (AMT), Pounds Per Square Inch (PSI), as well as Pascals (Pa).
 
 ## Barometer Source Code
-The source code for the Barometer extension can be downloaded [here](https://gldias.github.io/extensions/Barometer/barometer/SourceCode/BarometerSensor.java).
+The source code for the Barometer extension can be downloaded [here](https://gldias.github.io/extensions/Barometer/SourceCode/BarometerSensor.java).
 
 To use the files, download a fork of the [MIT App Inventor Project](https://github.com/mit-cml/appinventor-sources) and navigate to "*download_location*/appinventor/components/src/com".
 From there, you can either create your own package structure and change the `package` line at the top of each Java file or use the "com/rit/appinventor/components/runtime" already used in the files that were downloaded and place them in the runtime folder.
