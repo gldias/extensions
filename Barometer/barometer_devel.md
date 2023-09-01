@@ -24,3 +24,5 @@ From there, you can either create your own package structure and change the `pac
 
 `onDelete()`, `onResume()`, and `onStop()` help to control the app as the user interacts with the phone and other applications.
 `OnStop()` is activated when the user navigates away from the application, `onResume()` is called when the user returns to the application that's been in the background, and `onDelete()` is called when the application is closed and removed from memory.
+
+Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors

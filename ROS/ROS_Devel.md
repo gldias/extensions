@@ -50,3 +50,5 @@ Publishers in ROS are used to send commands to the robots in order to be execute
 [How to setup gazebo with ROS](http://gazebosim.org/tutorials?tut=ros_overview)
 
 [GzWeb Tutorial](http://gazebosim.org/tutorials?tut=gzweb_install&cat=gzweb)
+
+Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors
