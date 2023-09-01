@@ -40,3 +40,5 @@ You can use this [example App Inventor application](https://gldias.github.io/ext
 
 ## Developer Documentation
 More in-depth information for developers can be found [here](https://gldias.github.io/extensions/Barometer/barometer_devel).
+
+Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors

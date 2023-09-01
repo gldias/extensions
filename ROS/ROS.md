@@ -47,3 +47,5 @@ More in-depth information for developers can be found [here](https://gldias.gith
 
 ## Authors
 This extension was originally created by George Colgrove (lead developer), Guilherme Lopes Dias, Ryan Connors, and Nathan Oesterle
+
+Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors

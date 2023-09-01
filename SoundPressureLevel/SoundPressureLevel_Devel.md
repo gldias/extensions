@@ -134,3 +134,5 @@ The `caller` parameter is the name of the function where permissions were reques
 If the permission is granted, the application will be able to measure the sound level of the surrounding area. 
 If the permission is denied, the application with gracefully not do the measurements and calculations. 
 The user would then need to go into the settings to grant the permission or restart the application for the prompt to come up again.
+
+Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors
