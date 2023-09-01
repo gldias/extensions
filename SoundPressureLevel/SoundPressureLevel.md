@@ -1,0 +1,61 @@
+# **Sound Pressure Level Extension**
+
+For help on how to use an App Inventor extension, please see this [extensions guide](http://ai2.appinventor.mit.edu/reference/other/extensions.html).
+
+## Download
+You can download the sound pressure level extension [here](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel.aix).
+
+## Description
+This extension measures the sound pressure level and returns the data in decibels.
+There are three different measurements reported, unweighted decibels (dB), [A-Weighted decibels (dBA)](https://en.wikipedia.org/wiki/A-weighting), and [C-Weighted decibels (dBC)](https://en.wikipedia.org/wiki/A-weighting#C). 
+With this data you can build applications that measure and display sound around the device, or even to use the sound level as a way to control some other component of the application!
+
+Notes:
+
+There are some accuracy issues across devices. 
+Different devices will have different microphones with different sensitivity levels, causing measurements to vary from device to device.
+
+This extension requires permission to record audio in order to be able listen to the noise of the surrounding environment. 
+This permission can be granted while running or before starting the application. 
+
+## Properties
+![Is Sound Pressure Available Block](SPLBlocksImages/splAvailable.png)
+
+Indicates whether or not there is a microphone available to measure sound pressure.
+
+![Is Sound Pressure Enabled Block](SPLBlocksImages/splEnabled.png)
+
+Indicates whether or not the microphone is measuring sound pressure.
+
+![Set Sound Pressure Enabled Block](SPLBlocksImages/setSPLEnabled.png)
+
+Sets the sensor's `Enabled` flag to `true` to turn the extension on and `false` to turn the extension off.
+
+![Get Sound Pressure Level Block](SPLBlocksImages/splData.png)
+
+Gets the sound pressure level data in decibels (dB). The measurement reported by this call is unweighted.
+
+![Set Sound Pressure Listening Interval Block](SPLBlocksImages/SPLSetInterval.PNG)
+
+Sets the listening interval in milliseconds for how fast should the SPL return a reading.
+
+![Get Sound Pressure Listening Interval Block](SPLBlocksImages/SPLGetInterval.PNG)
+
+Gets the listening interval in milliseconds.
+
+## Events
+![Sound Pressure Level Updated Block](SPLBlocksImages/splUpdated.PNG)
+
+This event is triggered when the sound pressure level is updated. 
+This event gives access to the sound intensity over the last `ListenIntervalMilliseconds` amount of time in decibels (dB), A-Weighted decibels (dBA), C-Weighted decibels (dBC).
+
+## Example App
+
+You can use a [minimal App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL_minimal.aia) or a more [in-depth example App Inventor application](https://gldias.github.io/extensions/SoundPressureLevel/SPL.aia) to see the sound pressure level extension in action.
+
+## Developer Documentation
+
+More in-depth information for developers can be found [here](https://gldias.github.io/extensions/SoundPressureLevel/SoundPressureLevel_Devel).
+
+## Authors
+This extension was originally created by Nathan Oesterle (lead developer), Guilherme Lopes Dias, George Colgrove, and Ryan Connors
