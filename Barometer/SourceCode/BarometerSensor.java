@@ -1,3 +1,12 @@
+/**
+ * Extension to measure Sound Pressure Level
+ *
+ * Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors
+ *
+ * @author George Colgrove IV
+ */
+
+
 package com.rit.appinventor.components.runtime;
 
 import android.content.Context;

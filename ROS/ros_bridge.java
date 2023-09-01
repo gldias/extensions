@@ -1,3 +1,11 @@
+/**
+ * Extension to interact with a ROS Robot
+ *
+ * Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors
+ *
+ */
+
+
 package com.rit.appinventor.components.runtime;
 
 import android.os.Build;

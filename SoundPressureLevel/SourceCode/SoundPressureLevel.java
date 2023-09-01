@@ -1,6 +1,8 @@
 /**
  * Extension to measure Sound Pressure Level
  *
+ * Copyright 2019 George Colgrove IV, Guilherme Dias, Nathan Oesterle, Ryan Connors
+ *
  * @author Nathan Oesterle
  * @author Ryan Connors
  */
